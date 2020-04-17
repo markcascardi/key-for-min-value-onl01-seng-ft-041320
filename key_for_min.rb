@@ -1,6 +1,8 @@
-# prereqs: iterators, hashes, conditional logic
-# Given a hash with numeric values, return the key for the smallest value
 
-def key_for_min_value(name_hash)
 
+def key_for_min_value(ikea)
+  if ikea.empty?
+    nil
+  else ikea.reduce { |furniture, price| furniture.last > price.last ? price : furniture }.first
+  end
 end
