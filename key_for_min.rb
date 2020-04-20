@@ -5,3 +5,5 @@ def key_for_min_value(products)
 
   products.reduce { |item, price| binding.pry; item.last > price.last ? price : item }.first
 end
+
+key_for_min_value(products)
