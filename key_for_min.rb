@@ -1,8 +1,5 @@
+def key_for_min_value(products)
+  return nil if products.empty?
 
-
-def key_for_min_value(ikea)
-  if ikea.empty?
-    nil
-  else ikea.reduce { |furniture, price| furniture.last > price.last ? price : furniture }.first
-  end
+  products.reduce { |min, current| min.last > current.last ? current : min }.first
 end
